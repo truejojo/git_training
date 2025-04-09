@@ -8,3 +8,9 @@
 - git log -2: zeigt genau die letzten 2 commits
 
 // Branching
+- git branch: zeigt die localen Branches an
+- git branch: zeigt alle Branches an, auch die vom Remote Repository
+- git branch --set-upstream origin branchName: legt den neu erstellten branch(Local Repository) im Remote Repository an
+- git branch --set-upstream-to=origin/branchName: setzt unseren neuen branch auf einen vorhandenen remote branch
+
+// Merging
