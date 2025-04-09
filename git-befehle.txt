@@ -6,3 +6,5 @@
 
 - git log: zeigt eine Liste von den letzten commits
 - git log -2: zeigt genau die letzten 2 commits
+
+// Branching
