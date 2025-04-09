@@ -1,0 +1,3 @@
+- git status
+- git diff: zeigt die Änderungen im Working Directory an
+- git diff --staged: zeigt die Änderungen in der Staging Area an
