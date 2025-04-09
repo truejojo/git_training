@@ -1,3 +1,8 @@
-- git status
+- git status: zeigt den Status auf dem Local Repository an
+
 - git diff: zeigt die Änderungen im Working Directory an
 - git diff --staged: zeigt die Änderungen in der Staging Area an
+- git diff <commit>^: git vergleich die diesen commit mit einem commit davor
+
+- git log: zeigt eine Liste von den letzten commits
+- git log -2: zeigt genau die letzten 2 commits
