@@ -14,3 +14,6 @@
 - git branch --set-upstream-to=origin/branchName: setzt unseren neuen branch auf einen vorhandenen remote branch
 
 // Merging
+- git merge branchName: fügt den stand von branchName in den aktuellen branch
+
+// Merging - resolving conflicts
