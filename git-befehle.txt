@@ -6,6 +6,7 @@
 
 - git log: zeigt eine Liste von den letzten commits
 - git log -2: zeigt genau die letzten 2 commits
+- git log --graph: zeigt den branchverlauf an.
 
 // Branching
 - git branch: zeigt die localen Branches an
@@ -17,9 +18,10 @@
 - git merge branchName: fügt den stand von branchName in den aktuellen branch
 // Merging - resolving conflicts
 - By a conflict you have three possibles:
-  # accecpt Current Branch (this is the branch where you stay)
-  # accept Incomming Branch (this is the branch, which you merge in the current Branch)
+  # accecpt Current Change (this is the branch where you stay)
+  # accept Incomming Change (this is the branch, which you merge in the current Branch)
   # accecpt Both Branch
 - git merge --abhort: damit kann der merge abgebrochen werden
 
 // Rebasing
+- git rebase branchToMerge: der currentBranch wird umbasiert auf dem aktuellen Stand vom branchToMerge
