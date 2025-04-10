@@ -15,4 +15,5 @@
 
 // Merging
 - git merge branchName: fügt den stand von branchName in den aktuellen branch
--- resolving conflicts --
+
+// Merging - resolving conflicts
