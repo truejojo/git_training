@@ -34,3 +34,16 @@
 // Rebasing - resolving conflicts
 löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 - git rebase --continue: damit wird der Neue/Ausgewählte Stand in den vorhandenen commit übernommen und der Rebase kann abgeschlossen werden.
+
+// Updating the Dev Environment with remote changes
+- git fetch: lädt die Änderungen vom Remote Repository ohne sie jedoch einzufügen
+- git pull: lädt und fügt die Änderungen aus dem Remote Repository in dein Local Repositorys
+
+// Stashing changes (20be5a6)
+-> stash ist ein Stapel von Änderungen, auf dem Änderungen gespeichert werden können.
+- git stash: legt die Änderungen vom Arbeitsverzeichnis auf dem Stash ab
+- git stash list: eine Liste mit den Änderungen
+- git stash show: zeigt die letzten Änderungen im stash an
+- git stash pop: holt die letzte gespeicherte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder ein löscht sie aus dem stash
+- git stash apply {stash id}: holt die geforderte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder(Ohne löschen vom stash)
+- git stash branch {branchName}: Er erstellt einen Branch, beginnend mit dem HEAD zum Zeitpunkt des Stash-Vorgangs, und wendet die gespeicherten Änderungen auf diesen Branch an
