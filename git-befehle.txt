@@ -24,4 +24,13 @@
 - git merge --abhort: damit kann der merge abgebrochen werden
 
 // Rebasing
+-- WICHTIG START --
+- FeatureBranch aus checken
+  # dann: git rebase Master -> hier ist es genau anders herum als beim Mergen 
+-- WICHTIG ENDE --
 - git rebase branchToMerge: der currentBranch wird umbasiert auf dem aktuellen Stand vom branchToMerge
+- geit rebase --abort: damit kann ein Rebase abgebrochen werden
+
+// Rebasing - resolving conflicts
+löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
+- git rebase --continue: damit wird der Neue/Ausgewählte Stand in den vorhandenen commit übernommen und der Rebase kann abgeschlossen werden.
