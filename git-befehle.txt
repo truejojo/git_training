@@ -25,9 +25,15 @@
 
 // Rebasing
 -- WICHTIG START --
-- FeatureBranch aus checken
-  # dann: git rebase Master -> hier ist es genau anders herum als beim Mergen 
+- featureBranch aus checken
+  # dann: git rebase Master -> hier ist es genau anders herum als beim Mergen
 -- WICHTIG ENDE --
+---------
+-> wenn der master auch aktualliesiert werden soll
+- git checkout master
+- git merge featureBranch 
+- bzw. anstatt des (checkouts und des mergen, würde vom featureBranch aus ein Merge- Pull-Request gestellt werden) in einem Team würde jetzt ein Merge-Request bzs. ein Pull-Request gestellt werden(über GitHub)
+---------
 - git rebase branchToMerge: der currentBranch wird umbasiert auf dem aktuellen Stand vom branchToMerge
 - geit rebase --abort: damit kann ein Rebase abgebrochen werden
 
