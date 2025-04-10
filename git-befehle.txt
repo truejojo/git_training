@@ -15,4 +15,11 @@
 
 // Merging
 - git merge branchName: fügt den stand von branchName in den aktuellen branch
--- resolving conflicts --
+// Merging - resolving conflicts
+- By a conflict you have three possibles:
+  # accecpt Current Branch (this is the branch where you stay)
+  # accept Incomming Branch (this is the branch, which you merge in the current Branch)
+  # accecpt Both Branch
+- git merge --abhort: damit kann der merge abgebrochen werden
+
+// Rebasing
