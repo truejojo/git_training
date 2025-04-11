@@ -7,6 +7,7 @@
 - git log: zeigt eine Liste von den letzten commits
 - git log -2: zeigt genau die letzten 2 commits
 - git log --graph: zeigt den branchverlauf an.
+- git log --oneline: zeigt eine Liste von den letzten commits in einer Linie
 
 // Branching
 - git branch: zeigt die localen Branches an
@@ -77,4 +78,13 @@ Drücke danach Strg+X.
 Falls Nano dich fragt, „Save file under DIFFERENT NAME?“ wähle N (Nein), da du den vorgeschlagenen Dateinamen beibehalten möchtest.
 // Exkurs - ENDE
 
-// Cherry-picking
+// Cherry-pickings
+- git cherry-pick <from>..<to>: eine reihe von commits von - bis
+
+// Rewriting history
+-- example: forgot a file, but commit the rest.
+- git add forgottenFile.txt
+- git commit --amend
+
+// Interactive Rebase
+- git rebase -i HEAD~3: geht drei commits zurück
