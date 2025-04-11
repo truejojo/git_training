@@ -30,6 +30,7 @@
 -> wenn der master auch aktualliesiert werden soll
 - git checkout master
 - git merge featureBranch 
+- git rebase --continue: Damit wird ein git rebase immer abgeschlossen!!!
 - bzw. anstatt des (checkouts und des mergen, würde vom featureBranch aus ein Merge- Pull-Request gestellt werden) in einem Team würde jetzt ein Merge-Request bzs. ein Pull-Request gestellt werden(über GitHub)
 -- WICHTIG ENDE --
 
