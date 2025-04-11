@@ -54,4 +54,30 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 - git stash apply {stash id}: holt die geforderte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder(Ohne löschen vom stash)
 - git stash branch {branchName}: Er erstellt einen Branch, beginnend mit dem HEAD zum Zeitpunkt des Stash-Vorgangs, und wendet die gespeicherten Änderungen auf diesen Branch an
 
+<<<<<<< Updated upstream
 // Pulling with Conflicts
+=======
+// Pulling with Conflicts
+- git fetch: dann hat man die möglichkeit zu sehen wo es unstimmigkeiten gibt. (wenn gleich ein pull gemacht wird, werden einem sofort die konflikte angezeigt)
+- git pull --rebase (or the shorthand git pull -r) merged den Inhalt ebenfalls in local rebpository, jedoch wird kein expliziter commit dafür erzeugt.
+--> By the Way:
+You can also tell git to use rebase instead of merge as it's default strategy when your git pull, by setting the pull.rebase flag with a command like this git config --global pull.rebase true.
+<--
+
+// Exkurs - Nano
+- nach einem: git pull --rebase und lösen der konflikte wird der rebase mit: git rebase --continue abgeschlossen wobei sich dann ein editor öffnet z.B. nano um eien neue -m zu schreiben. die wird dann folgender maßen geschlossen:
+Speichern:
+
+Drücke einmal Strg+O. Unten sollte dann stehen:
+File Name to Write: .../COMMIT_EDITMSG
+
+Drücke Enter, um mit diesem Dateinamen zu speichern.
+
+Editor beenden:
+
+Drücke danach Strg+X.
+Falls Nano dich fragt, „Save file under DIFFERENT NAME?“ wähle N (Nein), da du den vorgeschlagenen Dateinamen beibehalten möchtest.
+// Exkurs - ENDEs
+
+// Cherry-pickings
+>>>>>>> Stashed changes
