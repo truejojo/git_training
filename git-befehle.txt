@@ -54,9 +54,6 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 - git stash apply {stash id}: holt die geforderte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder(Ohne löschen vom stash)
 - git stash branch {branchName}: Er erstellt einen Branch, beginnend mit dem HEAD zum Zeitpunkt des Stash-Vorgangs, und wendet die gespeicherten Änderungen auf diesen Branch an
 
-<<<<<<< Updated upstream
-// Pulling with Conflicts
-=======
 // Pulling with Conflicts
 - git fetch: dann hat man die möglichkeit zu sehen wo es unstimmigkeiten gibt. (wenn gleich ein pull gemacht wird, werden einem sofort die konflikte angezeigt)
 - git pull --rebase (or the shorthand git pull -r) merged den Inhalt ebenfalls in local rebpository, jedoch wird kein expliziter commit dafür erzeugt.
@@ -80,4 +77,3 @@ Falls Nano dich fragt, „Save file under DIFFERENT NAME?“ wähle N (Nein), da
 // Exkurs - ENDEs
 
 // Cherry-pickings
->>>>>>> Stashed changes
