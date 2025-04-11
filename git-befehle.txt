@@ -26,14 +26,13 @@
 // Rebasing
 -- WICHTIG START --
 - featureBranch aus checken
-  # dann: git rebase Master -> hier ist es genau anders herum als beim Mergen
--- WICHTIG ENDE --
----------
+  # dann: git rebase Master(branchToMerge) -> hier ist es genau anders herum als beim Mergen
 -> wenn der master auch aktualliesiert werden soll
 - git checkout master
 - git merge featureBranch 
 - bzw. anstatt des (checkouts und des mergen, würde vom featureBranch aus ein Merge- Pull-Request gestellt werden) in einem Team würde jetzt ein Merge-Request bzs. ein Pull-Request gestellt werden(über GitHub)
----------
+-- WICHTIG ENDE --
+
 - git rebase branchToMerge: der currentBranch wird umbasiert auf dem aktuellen Stand vom branchToMerge
 - geit rebase --abort: damit kann ein Rebase abgebrochen werden
 
@@ -44,6 +43,7 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 // Updating the Dev Environment with remote changes
 - git fetch: lädt die Änderungen vom Remote Repository ohne sie jedoch einzufügen
 - git pull: lädt und fügt die Änderungen aus dem Remote Repository in dein Local Repositorys
+- git pull --rebase (führt einen rebase anstatt ein merge aus)
 
 // Stashing changes (20be5a6)
 -> stash ist ein Stapel von Änderungen, auf dem Änderungen gespeichert werden können.
@@ -53,3 +53,5 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 - git stash pop: holt die letzte gespeicherte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder ein löscht sie aus dem stash
 - git stash apply {stash id}: holt die geforderte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder(Ohne löschen vom stash)
 - git stash branch {branchName}: Er erstellt einen Branch, beginnend mit dem HEAD zum Zeitpunkt des Stash-Vorgangs, und wendet die gespeicherten Änderungen auf diesen Branch an
+
+// Pulling with Conflicts
