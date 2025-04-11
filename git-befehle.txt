@@ -76,3 +76,4 @@ Drücke danach Strg+X.
 Falls Nano dich fragt, „Save file under DIFFERENT NAME?“ wähle N (Nein), da du den vorgeschlagenen Dateinamen beibehalten möchtest.
 // Exkurs - ENDE
 
+// Cherry-picking
