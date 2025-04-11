@@ -25,9 +25,14 @@
 
 // Rebasing
 -- WICHTIG START --
-- FeatureBranch aus checken
-  # dann: git rebase Master -> hier ist es genau anders herum als beim Mergen 
+- featureBranch aus checken
+  # dann: git rebase Master(branchToMerge) -> hier ist es genau anders herum als beim Mergen
+-> wenn der master auch aktualliesiert werden soll
+- git checkout master
+- git merge featureBranch 
+- bzw. anstatt des (checkouts und des mergen, würde vom featureBranch aus ein Merge- Pull-Request gestellt werden) in einem Team würde jetzt ein Merge-Request bzs. ein Pull-Request gestellt werden(über GitHub)
 -- WICHTIG ENDE --
+
 - git rebase branchToMerge: der currentBranch wird umbasiert auf dem aktuellen Stand vom branchToMerge
 - geit rebase --abort: damit kann ein Rebase abgebrochen werden
 
@@ -38,6 +43,7 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 // Updating the Dev Environment with remote changes
 - git fetch: lädt die Änderungen vom Remote Repository ohne sie jedoch einzufügen
 - git pull: lädt und fügt die Änderungen aus dem Remote Repository in dein Local Repositorys
+- git pull --rebase (führt einen rebase anstatt ein merge aus)
 
 // Stashing changes (20be5a6)
 -> stash ist ein Stapel von Änderungen, auf dem Änderungen gespeichert werden können.
@@ -47,4 +53,26 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 - git stash pop: holt die letzte gespeicherte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder ein löscht sie aus dem stash
 - git stash apply {stash id}: holt die geforderte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder(Ohne löschen vom stash)
 - git stash branch {branchName}: Er erstellt einen Branch, beginnend mit dem HEAD zum Zeitpunkt des Stash-Vorgangs, und wendet die gespeicherten Änderungen auf diesen Branch an
+
+// Pulling with Conflicts
+- git fetch: dann hat man die möglichkeit zu sehen wo es unstimmigkeiten gibt. (wenn gleich ein pull gemacht wird, werden einem sofort die konflikte angezeigt)
+- git pull --rebase (or the shorthand git pull -r) merged den Inhalt ebenfalls in local rebpository, jedoch wird kein expliziter commit dafür erzeugt.
+--> By the Way:
+You can also tell git to use rebase instead of merge as it's default strategy when your git pull, by setting the pull.rebase flag with a command like this git config --global pull.rebase true.
+<--
+
+// Exkurs - Nano
+- nach einem: git pull --rebase und lösen der konflikte wird der rebase mit: git rebase --continue abgeschlossen wobei sich dann ein editor öffnet z.B. nano um eien neue -m zu schreiben. die wird dann folgender maßen geschlossen:
+Speichern:
+
+Drücke einmal Strg+O. Unten sollte dann stehen:
+File Name to Write: .../COMMIT_EDITMSG
+
+Drücke Enter, um mit diesem Dateinamen zu speichern.
+
+Editor beenden:
+
+Drücke danach Strg+X.
+Falls Nano dich fragt, „Save file under DIFFERENT NAME?“ wähle N (Nein), da du den vorgeschlagenen Dateinamen beibehalten möchtest.
+// Exkurs - ENDE
 
