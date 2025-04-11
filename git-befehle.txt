@@ -47,3 +47,4 @@ löse die Konflikte auf, tue dies wie gehabt... dann fahre so fort
 - git stash pop: holt die letzte gespeicherte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder ein löscht sie aus dem stash
 - git stash apply {stash id}: holt die geforderte Änderung aus der Liste und fügt diese in das Arbetisverzeichins wieder(Ohne löschen vom stash)
 - git stash branch {branchName}: Er erstellt einen Branch, beginnend mit dem HEAD zum Zeitpunkt des Stash-Vorgangs, und wendet die gespeicherten Änderungen auf diesen Branch an
+
